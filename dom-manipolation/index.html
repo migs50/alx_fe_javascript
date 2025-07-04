@@ -23,6 +23,12 @@
     <button id="addQuoteBtn">Add Quote</button>
   </div>
 
+  <h2>Import / Export Quotes</h2>
+  <div>
+    <button onclick="exportToJsonFile()">Export Quotes</button>
+    <input type="file" id="importFile" accept=".json" onchange="importFromJsonFile(event)" />
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
