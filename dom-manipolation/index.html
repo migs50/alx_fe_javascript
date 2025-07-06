@@ -1,5 +1,54 @@
-<h2>Filter Quotes by Category</h2>
-<select id="categoryFilter" onchange="filterQuotes()">
-  <option value="all">All Categories</option>
-</select>
-<div id="filteredQuotes"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynamic Quote Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    #quoteDisplay {
+      margin: 20px 0;
+      font-size: 1.2em;
+      font-style: italic;
+    }
+    select, input, button {
+      margin-top: 10px;
+      padding: 10px;
+      width: 100%;
+      font-size: 1em;
+    }
+    button {
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    h2 {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dynamic Quote Generator</h1>
+
+  <!-- Category Filter -->
+  <h2>Filter by Category</h2>
+  <select id="categoryFilter" onchange="filterQuotes()">
+    <option value="all">All Categories</option>
+  </select>
+
+  <!-- Quote Display -->
+  <div id="quoteDisplay">Loading quotes...</div>
+  <button id="newQuote">Show New Quote</button>
+
+  <!-- Add New Quote -->
+  <h2>Add a New Quote</h2>
+  <div id="addQuoteFormContainer"></div>
+
+  <!-- Import/Export -->
+  <h2>Import / Export</h2>
+  <button onclick="exportToJson()">Export Quotes to JSON</button>
+  <input type="file" id="importFile" accept=".
